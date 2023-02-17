@@ -7,10 +7,14 @@
 	  ____) | | | | (_) \ V  V /| |____| | | (_| \__ \ | | |
 	 |_____/|_| |_|\___/ \_/\_/  \_____|_|  \__,_|___/_| |_|
 ```
-
-## Connect to the server trough ssh
+## Setup to run resources
 
 ```bash
-ssh level00@localhost -p 4242
-password: level00
+sudo apt-get install sshpass
+```
+
+## Extract a flag level
+
+```bash
+./flagXX.sh
 ```
