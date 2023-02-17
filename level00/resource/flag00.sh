@@ -20,5 +20,4 @@ do
 done
 '
 
-echo $SCRIPT
 sshpass -p level00 ssh level00@localhost -p 4242 "$SCRIPT"
