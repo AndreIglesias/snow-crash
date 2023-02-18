@@ -10,7 +10,7 @@
 ## Setup to run resources
 
 ```bash
-sudo apt-get install sshpass
+sudo apt-get install sshpass john
 ```
 
 ## Extract a flag level
