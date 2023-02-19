@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ROOT_DIR=$(dirname $(dirname $PWD))
+ROOT_DIR=$(dirname $(dirname $(dirname "$0")))
 
 if [ -f "$ROOT_DIR/john/run/john" ]; then
 	JOHN=$ROOT_DIR/john/run/john
