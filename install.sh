@@ -2,10 +2,11 @@
 
 declare -a deps=(
 	[0]=sshpass
-	[4]=build-essential
-	[5]=libssl-dev
-	[6]=git
-	[7]=zlib1g-dev
+	[1]=tshark
+	[2]=build-essential
+	[3]=libssl-dev
+	[4]=git
+	[5]=zlib1g-dev
 )
 
 install_deps()
