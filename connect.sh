@@ -9,9 +9,9 @@ if [ ! -z "$1" ] && [ ! -z "$2" ]; then
 		PREVL=level$(printf "%02d" $((10#$NUM - 1)))
 		echo "Connecting to $LEVEL with $PREVL's flag..."
 		if (($1 == 0)); then
-			sshpass -p level00 ssh $LEVEL@$2
+			sshpass -p level00 ssh $LEVEL@$2 -p 4242
 		else
-			sshpass -p $(cat $PREVL/flag) ssh $LEVEL@$2
+			sshpass -p $(cat $PREVL/flag) ssh $LEVEL@$2 -p 4242
 		fi
 	else
 		echo "Enter a valid number between 0 and $LAST_EXERCISE"
