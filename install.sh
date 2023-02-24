@@ -23,7 +23,7 @@ install_deps()
 
 install_deps
 if [ ! -f ".env" ]; then
-	read -p "Do you want to set the IP in an env file for the connect script [Y/n]:" yn
+	read -p "Do you want to set the IP in an env file for the connect script [Y/n]: " yn
 	yn=${yn:-y}
 	case $yn in
 		[Yy]* )
