@@ -25,5 +25,5 @@ if [ ! -z "$1" ]; then
 	echo "$PASS"
 	echo "$PASS" | awk 'END{print}' > flag05.pwd
 else
-	echo "Usage: ./flag00.sh <ip address>"
+	echo "Usage: ./flag05.sh <ip address>"
 fi
