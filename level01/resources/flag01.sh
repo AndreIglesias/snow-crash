@@ -14,7 +14,7 @@ else
 fi
 
 if [ ! -z "$1" ];then
-	sshpass -p $(cat $ROOT_DIR/level00/flag) scp -P 4242 level01@$1:/etc/passwd /tmp/
+	sshpass -p $(cat $ROOT_DIR/level00/flag) scp -P $2 level01@$1:/etc/passwd /tmp/
 	cat /tmp/passwd
 	echo -e "\nCracking with john...\n"
 	$JOHN /tmp/passwd --format=crypt
