@@ -25,7 +25,7 @@ echo -e "\nPassword: \n$ANS"
 '
 
 if [ ! -z "$1" ]; then
-	PASS=$(sshpass -p level00 ssh level00@$1 -p 4242 "$SCRIPT")
+	PASS=$(sshpass -p level00 ssh -o StrictHostKeyChecking=no level00@$1 -p $2 "$SCRIPT")
 	echo "$PASS"
 	echo "$PASS" | awk 'END{print}' > flag00.pwd
 else
