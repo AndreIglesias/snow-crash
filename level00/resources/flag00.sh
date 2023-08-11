@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# with find / -user flag00 2> /dev/null we find:
+# /usr/sbin/john and /rofs/usr/sbin/john.
+# The content of the /usr/sbin/john file is: cdiiddwpgswtgt which if we decode with ROT-11 we get: nottoohardhere
+
 SCRIPT='
 DICT="abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
 echo "USER: $(whoami)"

