@@ -24,10 +24,10 @@ done
 echo -e "\nPassword: \n$ANS"
 '
 
-if [ ! -z "$1" ]; then
-	PASS=$(sshpass -p level00 ssh -o StrictHostKeyChecking=no level00@$1 -p $2 "$SCRIPT")
-	echo "$PASS"
-	echo "$PASS" | awk 'END{print}' > flag00.pwd
+if [ ! -z "$1" ] && [ ! -z "$2" ]; then
+    PASS=$(sshpass -p level00 ssh -o StrictHostKeyChecking=no level00@$1 -p $2 "$SCRIPT")
+    echo "$PASS"
+    echo "$PASS" | awk 'END{print}' > flag00.pwd
 else
-	echo "Usage: ./flag00.sh <ip address>"
+    echo "Usage: ./flag00.sh <ip address> <port>"
 fi

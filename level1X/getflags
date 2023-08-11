@@ -1,0 +1,7 @@
+#/usr/bin/env bash
+for i in {0..14}
+do
+  usr=$(printf "flag%0.2d\n" $i)
+  echo -n "$usr: "
+  su $usr -c "/bin/getflag"
+done
