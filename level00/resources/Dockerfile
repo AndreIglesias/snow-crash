@@ -9,4 +9,4 @@ COPY flag00.sh .
 
 RUN chmod +x flag00.sh
 
-CMD ["./flag00.sh", "localhost", "4243"]
+CMD ["./flag00.sh", "192.168.122.1", "4243"]
