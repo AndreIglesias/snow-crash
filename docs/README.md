@@ -9,29 +9,27 @@
 	 |_____/|_| |_|\___/ \_/\_/  \_____|_|  \__,_|___/_| |_|
 
 ```
-## Install resources' dependencies
-This script will install every dependency needed to test the resources, it will optionally also create a .env file to store the IP address to not have to type it every time you connect with the `connect.sh` scrpt.
-```bash
-./install.sh
-```
-##### env file
-```bash
-IP=X.X.X.X
-```
-
 ## ssh connection
-To connect through ssh to a level, run the connect.sh script with the *level number* and *ip address* as parameters.
+To connect through ssh to a level, run the ssh with the *level number* and *ip address* as parameters.
 ### Examples
 ```bash
-./connect.sh 02 localhost
-./connect.sh 9 10.0.X.X
-./connect.sh 3 # With the env file set
+ssh level00@localhost -p 4242
 ```
-## Extract a flag level
-To extract a flag from a levelXX, run the *flagXX.sh* script in the `levelXX/resources/` directory. It will generate a *flagXX.pwd* file that is the flag's user password to obtain the next password level.
+## Run
+To run the script in `levelXX/resources/` that will give you the flag, you have to change the IP address and port in the Dockerfile to be able to connect with ssh inside the running script:
 ```bash
-./flagXX.sh 10.0.X.X
+CMD ["./flag00.sh", "192.168.122.1", "4243"]
 ```
+Then to run the Dockerfile (that will run the flag.sh inside a container) you can do:
+```bash
+./run.sh
+# or
+docker build --progress=plain -t flag00-cont . && docker run --network host -it flag00-cont
+```
+
+## levelX
+
+You can hack the entire machine with [CVE-2016-5195](https://github.com/dirtycow/dirtycow.github.io/wiki/VulnerabilityDetails) (Dirty COW). This is a privilege escalation vulnerability in the Linux Kernel that will allows us to create a privileged user that we can use to access to every *flag user* and obtain every flag.
 
 ## From root user
 ```bash
