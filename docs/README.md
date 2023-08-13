@@ -30,7 +30,7 @@ docker build --progress=plain -t flag00-cont . && docker run --network host -it 
 ## levelX
 
 <p align="center">
-  <img src="dirtycow.png"/> 
+  <img src="https://github.com/AndreIglesias/snow-crash/assets/35022933/66b52885-836c-4916-aac2-d607c98e5454"/> 
 </p>
 
 You can hack the entire machine with [CVE-2016-5195](https://github.com/dirtycow/dirtycow.github.io/wiki/VulnerabilityDetails) (Dirty COW). This is a privilege escalation vulnerability in the Linux Kernel that will allows us to create a privileged user that we can use to access to every *flag user* and obtain every flag.
