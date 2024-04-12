@@ -1,4 +1,4 @@
-# level01 Password Decryption
+# Level01 Password Decryption
 
 In this challenge, our objective is to obtain the password for the `flag01` account.
 ## Challenge Overview

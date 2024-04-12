@@ -1,4 +1,4 @@
-# level00 Flag Deciphering
+# Level00 Flag Deciphering
 
 In this challenge, our goal is to uncover the password for the `flag00` account.
 
