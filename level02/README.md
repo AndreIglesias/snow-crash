@@ -1,4 +1,4 @@
-# Level02 Flag Extraction
+# Level02 PCAP Flag Extraction
 
 In this challenge, our objective is to extract a password from a provided pcap file and save it to `/tmp/level02.txt`.
 
