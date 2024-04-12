@@ -1,15 +1,22 @@
-# level00
+# level00 Flag Deciphering
 
-The flag we search for is the password for the account `flag00`. 
+In this challenge, our goal is to uncover the password for the `flag00` account.
 
-We can try to find the files owned by this user with this command:
+## Challenge Overview
+
+The flag we're aiming to discover is actually the password associated with the `flag00` account. To begin our investigation, we can start by identifying files owned by this user.
+
+## Approach
+
+To find files owned by the `flag00` user, we can execute the following command:
+
 ```bash
 find / -user flag00 2> /dev/null
 ```
 
-We get two files: `/usr/sbin/john` and `/rofs/usr/sbin/john`. And in one of them there's an eye catching string `cdiiddwpgswtgt`, which might be a simple substitution cipher.
+This command helps us locate files owned by the specified user. Upon running this command, we identify two files: `/usr/sbin/john` and `/rofs/usr/sbin/john`. Among these files, an intriguing string `cdiiddwpgswtgt`, captures our attention. It appears to be a simple substitution cipher.
 
-As we try to decipher with this algorithm.
+We proceed to decipher this string using the provided algorithm:
 
 ```bash
 DICT="abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
@@ -28,4 +35,9 @@ do
 done
 ```
 
-We see that one of the output rotations (ROT-11) is: `nottoohardhere`.
+Upon examination, we discover that one of the output rotations (ROT-11) reveals the deciphered text: `nottoohardhere`.
+
+This deciphered text likely serves as the password for the `flag00` account.
+
+> [!NOTE]
+> In solving this challenge, we utilize a basic substitution cipher decryption technique. It's important to note that encryption and decryption methods can vary widely, and this specific method is just one approach among many.

@@ -1,6 +1,6 @@
 # level01 Password Decryption
 
-In this challenge, our objective is to obtain the password for the flag01 account.
+In this challenge, our objective is to obtain the password for the `flag01` account.
 ## Challenge Overview
 
 The flag we're searching for is actually the password associated with the flag01 account. This password is stored in the `/etc/passwd` file, but in a hashed form.
