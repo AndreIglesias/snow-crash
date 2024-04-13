@@ -11,6 +11,12 @@ Welcome to SnowCrash, a cybersecurity challenge series designed to develop your 
 	 |_____/|_| |_|\___/ \_/\_/  \_____|_|  \__,_|___/_| |_|
 
 ```
+
+<p align="center">
+  <img src="https://github.com/AndreIglesias/snow-crash/assets/35022933/f08de1fd-7860-4727-844a-580183d73be1" width="20%"/> 
+  <img src="https://github.com/AndreIglesias/snow-crash/assets/35022933/4861045f-fc69-4a3d-9708-496c341df7bd" width="40%"/>
+</p>
+
 ## Technical Focus
 
 SnowCrash covers a broad spectrum of cybersecurity areas, including:
