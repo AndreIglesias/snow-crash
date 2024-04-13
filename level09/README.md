@@ -1,29 +1,41 @@
-"Verify home"
+# Level09 Exploit
+
+In this challenge, we have an executable named `level09` and a file named `token`. Upon executing `level09`, we observe that it requires exactly one argument. Additionally, we notice that the output of the program changes based on the input, and the contents of the `token` file are in hexadecimal format.
+
+## Initial Exploration
+
+Let's start by verifying the contents of the home directory:
+
+```bash
 level09@SnowCrash:~$ ls
 > level09  token
+```
 
-"Run program"
+Next, we attempt to run the level09 program:
+
+```bash
 level09@SnowCrash:~$ ./level09 
 > You need to provied only one arg.
 level09@SnowCrash:~$ ./level09 token 
 > tpmhr
+```
 
-"Check the input actualy modifies the string by the number of the position"
+We also check the behavior of the program with different input:
+
+```bash
 level09@SnowCrash:~$ ./level09 abc
 > ace
+```
 
-"Check the contents of token"
-level09@SnowCrash:~$ cat token 
-> f4kmm6p|=�p�n��DB�Du{��
-level09@SnowCrash:~$ hexdump token
-> 0000000 3466 6d6b 366d 7c70 823d 707f 6e82 8283
-> 0000010 4244 4483 7b75 8c7f 0a89               
-> 000001a
+## Vulnerability Analysis
 
-"Make a string of hex"
-66346b6d6d36707c3d827f70826e838244428344757b7f8c89
+Upon examining the contents of the `token` file and the behavior of the `level09` program, we deduce that the program modifies the input string based on the position of each character. Additionally, the `token` file contains hexadecimal values.
 
-"Run this script that takes a string of hex and reduces each one by the number of the position"
+## Exploit Procedure
+
+To exploit this vulnerability and retrieve the flag, we can write a script that takes a string of hexadecimal values as input, reduces each value based on its position, and converts it back to ASCII characters. Here's the exploit script:
+
+```bash
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
@@ -44,12 +56,15 @@ while [ -n "$input_hex" ]; do
   reduced_ascii_val=$((reduced_ascii_val % 255))
   reduced_char=$(printf "\\$(printf '%03o' "$reduced_ascii_val")")
   output="$output$reduced_char"
-  echo "($position)"
   ((position++))
 done
 
 echo "Original Hex Values: $1"
 echo "Reduced String: $output"
+```
 
-"Output and flag should be this"
-f3iji1ju5yuevaus41q1afiuq
+Ensure to execute this script with the string of hexadecimal values extracted from the `token` file.
+
+## Conclusion
+
+By reducing each hexadecimal value based on its position and converting it back to ASCII characters, we successfully retrieved the flag: `f3iji1ju5yuevaus41q1afiuq`.
