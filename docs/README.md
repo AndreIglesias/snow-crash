@@ -1,5 +1,5 @@
 # SnowCrash
-Welcome to SnowCrash, a cybersecurity challenge series designed to develop your skills in penetration testing, reverse engineering, and exploit development. In SnowCrash, you'll encounter various security vulnerabilities found in real-world scenarios, ranging from weak password storage mechanisms to web application vulnerabilities and beyond.
+Welcome to SnowCrash, a cybersecurity challenge series designed to develop skills in penetration testing, reverse engineering, and exploit development. In SnowCrash, you'll encounter various security vulnerabilities found in real-world scenarios, ranging from weak password storage mechanisms to web application vulnerabilities and beyond.
 
 
 ```
