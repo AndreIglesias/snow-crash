@@ -34,8 +34,10 @@ Each level in SnowCrash presents a unique challenge requiring you to employ vari
 ## Challenge Structure
 
 Explore the directories for each level to find detailed READMEs and scripts providing step-by-step instructions on how to exploit the vulnerabilities and retrieve the flags.
+
 ## ssh connection
-To connect through ssh to a level, run the ssh with the *level number* and *ip address* as parameters.
+To connect through SSH to a level, run the ssh command with the *level number* and *ip address* as parameters.
+
 ### Examples
 ```bash
 ssh level00@localhost -p 4242
